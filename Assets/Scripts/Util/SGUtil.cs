@@ -83,6 +83,14 @@ public static class SGUtil
         return angle;
     }
 
+    public static float GetShiftedAngle(int wayIndex, float bassAngle, float betweenAngle)
+    {
+        float angle = wayIndex % 2 == 0 ?
+            bassAngle - (betweenAngle * (float)wayIndex / 2f) :
+            bassAngle + (betweenAngle * Mathf.Ceil((float)wayIndex / 2f));
+
+        return angle;
+    }
 }
 
 
