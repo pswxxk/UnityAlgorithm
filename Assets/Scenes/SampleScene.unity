@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &151007895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shooting: 1
-  axisMove: 0
+  axisMove: 1
   inheritAngle: 0
   startOnAwake: 1
   startOnAwakeDelay: 1
@@ -302,6 +302,8 @@ MonoBehaviour:
   - shotObj: {fileID: 1962946127}
     afterDelay: 0.1
   - shotObj: {fileID: 151007895}
+    afterDelay: 0.1
+  - shotObj: {fileID: 1447977011}
     afterDelay: 0.1
   updateStep: 0
 --- !u!65 &328113839
@@ -384,6 +386,7 @@ Transform:
   - {fileID: 339926545}
   - {fileID: 1962946128}
   - {fileID: 151007896}
+  - {fileID: 1447977012}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -715,6 +718,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1447977010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447977012}
+  - component: {fileID: 1447977011}
+  m_Layer: 0
+  m_Name: PrintShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1447977011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447977010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e23d2bb847a6b4c886d3ec5bee8457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2590598066090981887, guid: 95508ca9fc8d4864dbca8d9e8c6cdbd9, type: 3}
+  projectileNum: 50
+  projectileSpeed: 10
+  accelerationSpeed: 0
+  useMaxSpeed: 0
+  maxSpeed: 0
+  useMinSpeed: 0
+  minSpeed: 0
+  accelerationTurn: 0
+  usePauseAndResume: 0
+  pauseTime: 0
+  resumeTime: 0
+  useAutoRelease: 0
+  autoReleaseTime: 10
+  paintDataText: {fileID: 4900000, guid: 5fbf1d09bc434fb4695582edde40d774, type: 3}
+  paintCenterAngle: 180
+  betweenAngle: 3
+  nextLineDelay: 0.1
+  nowIndex: 0
+--- !u!4 &1447977012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447977010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328113842}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507906256
 GameObject:
