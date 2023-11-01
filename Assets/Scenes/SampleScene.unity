@@ -252,6 +252,66 @@ Transform:
   m_Father: {fileID: 328113842}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &201278095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201278097}
+  - component: {fileID: 201278096}
+  m_Layer: 0
+  m_Name: LinearShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &201278096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201278095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d158376940e563459438def5a7a9c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7714845685786486640, guid: 03920d2caafb1b6419d7cdc640adc8c3, type: 3}
+  projectileNum: 50
+  projectileSpeed: 1
+  accelerationSpeed: 0
+  useMaxSpeed: 0
+  maxSpeed: 0
+  useMinSpeed: 0
+  minSpeed: 0
+  accelerationTurn: 0
+  usePauseAndResume: 0
+  pauseTime: 0
+  resumeTime: 0
+  useAutoRelease: 0
+  autoReleaseTime: 10
+  angle: 180
+  betweenDelay: 5
+--- !u!4 &201278097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201278095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328113842}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328113837
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +364,8 @@ MonoBehaviour:
   - shotObj: {fileID: 151007895}
     afterDelay: 0.1
   - shotObj: {fileID: 1447977011}
+    afterDelay: 0.1
+  - shotObj: {fileID: 201278096}
     afterDelay: 0.1
   updateStep: 0
 --- !u!65 &328113839
@@ -387,6 +449,7 @@ Transform:
   - {fileID: 1962946128}
   - {fileID: 151007896}
   - {fileID: 1447977012}
+  - {fileID: 201278097}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -735,7 +798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1447977011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,7 +829,6 @@ MonoBehaviour:
   paintCenterAngle: 180
   betweenAngle: 3
   nextLineDelay: 0.1
-  nowIndex: 0
 --- !u!4 &1447977012
 Transform:
   m_ObjectHideFlags: 0
